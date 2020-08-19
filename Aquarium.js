@@ -1,22 +1,28 @@
 window.onload=function() {
   lengthObj = document.getElementById('txtLength');
-  girthObj = document.getElementById('txtGirth');
-  weightObj = document.getElementById('tdWeight');
+  heightObj = document.getElementById('txtHeight');
+  widthObj = document.getElementById('txtWidth');
+  costObj = document.getElementById('tdCost');
   document.getElementById('btnReset').onclick = resetInputs;
   document.getElementById('btnCalc').onclick = calcWeight;
 }
 function resetInputs() {
   lengthObj.value = '';
-  girthObj.value = '';
-  weightObj.innerHTML = '';
+  heightObj.value = '';
+  widthObj.value = '';
+  costObj.innerHTML = '';
 }
 function calcWeight() {
   var length = new Number(lengthObj.value);
-  var girth = new Number(girthObj.value);
-  weightObj.innerHTML = '';
-  if(isNaN(length) || isNaN(girth)) {
-    alert('Invalid length or girth');
+  var height = new Number(heightObj.value);
+  var width = new Number(widthObj.value);
+  costObj.innerHTML = '';
+  if(isNaN(length) || isNaN(height) || isNaN(width) ){
+    alert('Invalid inputs');
     return;
     }
-weightObj.innerHTML = length*Math.pow(girth,2)/800;
+	
+function surfaceArea () {
+	
+costObj.innerHTML = (height*length + );
 }
